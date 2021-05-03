@@ -59,6 +59,10 @@ func (n *Num) ToWord() (string, error) {
 }
 
 func main() {
+	if len(os.Args) < 2 {
+		fmt.Println("No args were given")
+		return
+	}
 	nums := os.Args[1:]
 
 	for i := 0; i < len(nums); i++ {
